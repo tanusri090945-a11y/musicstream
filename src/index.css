@@ -1,0 +1,619 @@
+
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 70px;
+    background: #111827;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-links button {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.nav-links button:hover {
+    color: #a78bfa;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn {
+    background: #7c3aed;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background: #6d28d9;
+}
+
+.secondary-btn {
+    background: #374151;
+}
+
+.danger-btn {
+    background: #ef4444;
+}
+
+.small-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+/* ================= HOME ================= */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+    background:
+        linear-gradient(135deg, #111827, #4c1d95);
+}
+
+.hero-content {
+    max-width: 750px;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.features {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.feature-card span {
+    font-size: 40px;
+}
+
+.feature-card h3 {
+    margin: 15px 0;
+}
+
+.feature-card p {
+    color: #666;
+}
+
+/* ================= AUTH ================= */
+
+.auth-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #111827, #4c1d95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-box {
+    width: 420px;
+    max-width: 90%;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.auth-box h1 {
+    text-align: center;
+    color: #7c3aed;
+    margin-bottom: 10px;
+}
+
+.auth-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.auth-box label {
+    display: block;
+    margin: 15px 0 6px;
+}
+
+.auth-box input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+.auth-box .btn {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.auth-box p {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.auth-box a {
+    color: #7c3aed;
+    cursor: pointer;
+}
+
+.message {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.admin-info {
+    font-size: 13px;
+    color: #777;
+}
+
+/* ================= USER DASHBOARD ================= */
+
+.dashboard {
+    min-height: calc(100vh - 70px);
+    display: grid;
+    grid-template-columns: 230px 1fr;
+}
+
+.sidebar {
+    background: #111827;
+    color: white;
+    padding: 25px;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 10px;
+    border: none;
+    background: transparent;
+    color: white;
+    text-align: left;
+    border-radius: 8px;
+}
+
+.sidebar button:hover {
+    background: #374151;
+}
+
+.main-content {
+    padding: 35px;
+    padding-bottom: 120px;
+}
+
+.main-content h1 {
+    margin-bottom: 25px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* ================= SONG GRID ================= */
+
+.song-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 20px;
+}
+
+.song-card {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.song-image {
+    height: 150px;
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.song-card h3 {
+    margin-bottom: 6px;
+}
+
+.song-card p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.song-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.song-actions button {
+    border: none;
+    padding: 7px 9px;
+    border-radius: 6px;
+}
+
+.play-btn {
+    background: #7c3aed;
+    color: white;
+}
+
+.playlist-btn {
+    background: #e5e7eb;
+}
+
+.download-btn {
+    background: #dbeafe;
+}
+
+.review-btn {
+    background: #fef3c7;
+}
+
+/* ================= PLAYER ================= */
+
+.music-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111827;
+    color: white;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 100;
+}
+
+.now-playing {
+    min-width: 220px;
+}
+
+.now-playing small {
+    display: block;
+    color: #aaa;
+    margin-top: 4px;
+}
+
+.music-player audio {
+    flex: 1;
+}
+
+/* ================= PLAYLIST ================= */
+
+.playlist-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.playlist-card button {
+    margin-top: 10px;
+}
+
+/* ================= REVIEWS ================= */
+
+.review-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.review-card p {
+    margin-top: 8px;
+}
+
+/* ================= MODAL ================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.modal-content {
+    background: white;
+    width: 450px;
+    max-width: 90%;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modal-content select,
+.modal-content textarea {
+    width: 100%;
+    margin: 15px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.modal-content textarea {
+    min-height: 100px;
+}
+
+/* ================= ADMIN ================= */
+
+.admin-layout {
+    min-height: calc(100vh - 70px);
+    display: grid;
+    grid-template-columns: 230px 1fr;
+}
+
+.admin-sidebar {
+    background: #1f2937;
+    color: white;
+    padding: 25px;
+}
+
+.admin-sidebar h2 {
+    margin-bottom: 25px;
+}
+
+.admin-sidebar button {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 10px;
+    background: transparent;
+    color: white;
+    border: none;
+    text-align: left;
+    border-radius: 7px;
+}
+
+.admin-sidebar button:hover {
+    background: #374151;
+}
+
+.admin-main {
+    padding: 35px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.stat-card h2 {
+    color: #7c3aed;
+    font-size: 38px;
+}
+
+.admin-form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.admin-form input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+}
+
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 13px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+th {
+    background: #f3f4f6;
+}
+
+.table-btn {
+    border: none;
+    padding: 7px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.edit-btn {
+    background: #dbeafe;
+}
+
+.delete-btn {
+    background: #fee2e2;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .dashboard,
+    .admin-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar,
+    .admin-sidebar {
+        display: none;
+    }
+
+    .main-content,
+    .admin-main {
+        padding: 20px;
+        padding-bottom: 130px;
+    }
+
+    .music-player {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
+
+#root { min-height: 100vh; }
